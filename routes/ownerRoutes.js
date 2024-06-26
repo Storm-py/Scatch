@@ -21,7 +21,8 @@ router.post('/create',async function(req,res){
 });
 }
 router.get('/admin',(req,res)=>{
-    res.render('createproducts')
+    let success =req.flash('success')
+    res.render('createProducts',{success})
 })
 
 module.exports=router;
